@@ -27,7 +27,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ## My process and what I learned
 
-I created an XD File before coding to create a prototype of the design. I also drew the containers for each element on the page to provide a visualization of how everything is structured before I code.
+I created an XD File before coding to create a prototype of the design.
 
 I practiced how to use CSS Grid and positioning elements with start, center and end. I also practiced animations.
 
@@ -37,7 +37,6 @@ I practiced how to use CSS Grid and positioning elements with start, center and 
 - HTML and CSS
 - Some BEM CSS class naming convention
 - CSS Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 
@@ -55,12 +54,9 @@ I learned how to use these lines of code:
 
 ### Continued development and resources
 
-In the future, I want to be able to work faster and create nav bars with fluidly using flexbow. 
+I want to have a faster workflow.
 
-- [CSS Tricks: A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) - This helped me with CSS Grid.
-- [MDN Web Docs: Box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) - This helped me with styling box shadows.
-- [CSS Tricks: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - This helped me with CSS Flexbox positioning. 
-- [The 2020 Frontend Developer Crash Course for Absolute Beginners](https://www.youtube.com/watch?v=QA0XpGhiz5w&list=WL&index=1&t=7130s) - this helped get the idea of adding an animation. I think its a nice detail that adds professionalism.
+- [W3 Schools: Multiple Background Images](https://www.w3schools.com/css/css3_backgrounds.asp) - This helped me with adding multiple images in the background and positioning them - even the shorthand background.
 
 
 ## Author

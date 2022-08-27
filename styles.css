@@ -1,28 +1,303 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
 
 :root {
-  --Very Dark Magenta: hsl(300, 43%, 22%);
-  --Soft Pink: hsl(333, 80%, 67%);
+  --heading-color: hsl(300, 43%, 22%);
+  --sub-title-color: hsl(333, 80%, 67%);
+  --rating-card: hsla(300, 43%, 22%, .07);
 
-  --dark Grayish Magenta: hsl(303, 10%, 53%);
-  --Light Grayish Magenta: hsl(300, 24%, 96%);
-  --White: hsl(0, 0%, 100%);
+  --parragraph-color: hsl(303, 10%, 53%);
+  --quote-text: hsl(300, 24%, 96%);
+  --quotes-text: hsl(0, 0%, 100%);
 
   --font: 'League Spartan', sans-serif;
   --font-weight-parragraph: 400;
   --font-weight-heading: 700;
   --font-weight-quote: 500;
-  
 }
 
+/* Andy Bell's CSS Reset - https://piccalil.li/blog/a-modern-css-reset/ */
 
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  /* font: inherit; */
+}
 
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  list-style-type: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* utilities */
+
+body {
+  background: url(./images/bg-pattern-top-mobile.svg) left top no-repeat, url(./images/bg-pattern-bottom-mobile.svg) right bottom no-repeat;
+  /* background-position: left top, right bottom; */
+  /* background-repeat: no-repeat, no-repeat; */
+  background-size: contain;
+  font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px 10px 0px;
+
+}
+
+.container {
+  max-width: 330px;
+}
+
+.title {
+  margin: 0px 35px 0px;
+  color: var(--heading-color);
+  font-size: 2.5rem;
+  line-height: 32px;
+  text-align: center;
+}
+
+.description {
+  margin-top: 14px;
+  margin-bottom: 32px;
+  color: var(--parragraph-color);
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.rating-card {
+  margin-top: 16px;
+  background: var(--rating-card);
+  border-radius: 7px;
+}
+
+.rating-card {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-stars {
+  width: 118px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-card p {
+  margin-top: 16px;
+  font-size: 1rem;
+  font-weight: var(--font-weight-heading);
+  color: var(--heading-color);
+  text-align: center;
+}
+
+.container-cards {
+  margin-top: 34px;
+  max-width: 330px;
+}
+
+.card {
+  background-color: var(--heading-color);
+  margin-top: 16px;
+  padding: 32px;
+  border-radius: 7px;
+}
+
+.container-profile {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 39px;
+  overflow: hidden;
+  margin-right: 24px;
+}
+
+.image img {
+  border-radius: 40px;
+}
+
+.card h2 {
+  font-size: 1rem;
+  color: var(--quote-text);
+}
+
+.card h3 {
+  margin-top: -5px;
+  font-size: 1rem;
+  color: var(--sub-title-color);
+  font-weight: 400;
+}
+
+.card p {
+  margin-top: 28px;
+  font-size: 1rem;
+  color: var(--quote-text);
+  font-weight: var(--font-weight-parragraph);
+}
 
 .attribution {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     font-size: 11px;
     text-align: center;
   }
   .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(316, 76%, 62%);
+    font-weight: 500;
+  }
+
+  @media screen and (min-width: 900px) {
+
+    body {
+      margin: 116px 16px 0px;
+      background: url(./images/bg-pattern-top-desktop.svg) left top no-repeat, url(./images/bg-pattern-bottom-desktop.svg) right bottom no-repeat;
+      background-size: contain;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1110px;
+      display: flex;
+      flex-direction: row;
+    }
+    .container-main-info {
+      flex: 1 1 50%;
+    }
+
+    .title {
+      font-size: 3.5rem;
+      line-height: 47px;
+      margin: 0px 190px 0px 0px;
+      text-align: left;
+    }
+
+    .description {
+      margin-right: 136px;
+      text-align: left;
+    }
+
+    .container-ratings {
+      margin-top: 15px;
+      flex: 1 1 50%;
+    }
+
+    .rating-card {
+      padding: 19px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .rating-card p {
+      margin-top: 0px;
+      margin-left: 32px;
+    }
+
+    .rating-card--reviews {
+      margin-left: 1rem;
+      margin-right: 96px;
+    }
+
+    .rating-card--report-guru {
+      margin-left: 64px;
+      margin-right: 48px;
+
+    }
+
+    .rating-card--besttech {
+      margin-left: 110px;
+    }
+
+    .container-cards {
+      max-width: 1110px;
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+    } 
+
+    .card {
+      margin-top: 0px;
+    }
+
+    .card--colton {
+      margin-bottom: 32px;
+    }
+
+    .card--irene {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    .card--anne {
+      margin-top: 32px;
+    }
+
+    .attribution {
+      margin-top: 170px;
+    }
   }
