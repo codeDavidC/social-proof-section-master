@@ -1,6 +1,7 @@
 # Frontend Mentor - NFT preview card component solution
 
 ![Web design layout of front end mentor QR Code Component Solution](./design/desktop-design.jpg)
+![Mobile version stacked](./design/mobile-design-stack.jpg)
 ![Web page design with drawn out box containers](./design/Container%20Outline.jpg)
 
 This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/).
